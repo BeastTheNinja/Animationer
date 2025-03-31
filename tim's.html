@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animation</title>
+    <style>
+/* IMPORTS */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+html{
+    scroll-behavior: smooth;
+}
+/* #region GLOBAL STYLES*/
+:root {
+    --light: #efefef;
+    --medium: #5e6873;
+    --dark: #323232;
+    --black: #111;
+    --blue-dark: #3b5491;
+    --blue-light: #5f7ecb;
+    --turquise-dark: #009bb0;
+    --turquise-light: #aedde3;
+    --orange-dark: #ff7c35;
+    --orange-light: #ff9a63;
+    --grey-dark: #444;
+    --grey-light: #999;
+    /* BUTTONS */
+    --primary: #497bbd;
+    --static: #cdcdcd;
+    --danger: #b74949;
+    --warning: #be6e30;
+    --success: #879b55;
+}
+body{
+    font-family:'Montserrat', sans-serif;
+    background-color: var(--light);
+    color: var(--dark);
+}
+img{
+    display: block;
+    width: 100%;
+}
+header < h1,h2{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Fylder hele skærmen */
+    text-align: center;
+}
+
+header > h1,h2{
+    position: relative;
+    color: var(--light);
+    font-weight: 9000;
+    text-align: center;
+    margin: 0;
+    animation: bounce 1s ease-in-out infinite;
+}
+header > h1{
+    position: absolute;
+    top: 50%;
+    left: 45%;
+    transform: translate(-50%, -45%);
+}
+header > h2{
+    position: absolute;
+    top: 55%;
+    left: 45%;
+    transform: translate(-55%, -45%);
+}
+@keyframes gradients{
+    0%{
+        filter: hue-rotate(360deg);
+    }
+    50%{
+        filter: hue-rotate(180deg);
+    }
+    100%{
+        filter: hue-rotate(360deg);
+    }
+}
+@keyframes bounce {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    20% {
+        transform: translateY(-30px);
+    }
+    40% {
+        transform: translateY(0);
+    }
+    60% {
+        transform: translateY(-15px);
+    }
+    80% {
+        transform: translateY(0);
+    }
+}
+body {
+    margin: 0;
+    height: 100vh;
+    background: linear-gradient(45deg, 
+    red, orange, yellow, green, blue, indigo, violet);
+    background-size: 400% 400%;
+    animation: rainbowPulse 2s infinite alternate;
+}
+
+@keyframes rainbowPulse {
+    0% {
+        background-position: 0% 50%;
+    }
+    100% {
+        background-position: 100% 50%;
+    }
+}
+/* #endregion */
+/* linearGradient  */
+.animation-battle{
+    background: #020024;
+    background: linear-gradient(90deg, #020024 10%, #fc0000f1 41%, #00d4ff 84%);
+    filter: hue-rotate(360deg);
+    animation: gradients 5s infinite;
+    background-clip: text;
+}
+@keyframes gradients{
+    0%{
+        filter: hue-rotate(360deg);
+    }
+    50%{
+        filter: hue-rotate(180deg);
+    }
+    100%{
+        filter: hue-rotate(360deg);
+    }
+}
+.animation{
+    background: #020024;
+    background: linear-gradient(90deg, #020024 10%, #fc0000f1 41%, #00d4ff 84%);
+    filter: hue-rotate(360deg);
+    animation: gradients 5s infinite;
+    background-clip: text;
+}
+@keyframes gradients{
+    0%{
+        filter: hue-rotate(360deg);
+    }
+    50%{
+        filter: hue-rotate(180deg);
+    }
+    100%{
+        filter: hue-rotate(360deg);
+    }
+}
+/* ANIMATION BATTLE  */
+.animation-battle > div{
+    background-color: var(--primary);
+    color: var(--light);
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    line-height: 60px;
+    text-align: center;
+    margin-bottom: 0.6rem;
+    animation: Mycolor 4s 2s infinite;
+
+}
+.animation-battle > div:nth-child(2){
+    animation: Mycolor 5s 3s infinite;
+}
+.animation-battle > div:nth-child(3){
+    animation:Mycolor 6s 4s infinite;
+}
+.animation-battle > div:nth-child(4){
+    animation:Mycolor 7s 5s infinite;
+}
+.animation-battle > div:nth-child(5){
+    animation: Mycolor 8s 6s infinite;
+}
+.animation-battle > div:nth-child(6){
+    animation: Mycolor 9s 7s infinite;
+}
+@keyframes Mycolor{
+        0% {
+            margin-left: 0;
+            border-radius: 0;
+            transform: rotate(0deg);
+            margin-top: 0;
+            margin-bottom: 0;
+        }
+        50% {
+            margin-left: 90%;
+            border-radius: 50%;
+            transform: rotate(360deg);
+            margin-top: 5%;
+            margin-bottom: 1%;
+        }
+        100% {
+            margin-left: 0;
+            border-radius: 0;
+            transform: rotate(0deg);
+            margin-top: 0;
+            margin-bottom: 0;
+        }
+     }
+     /* ANIMATION FIRST  */
+.animation > div{
+    background-color: var(--primary);
+    color: var(--light);
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    line-height: 60px;
+    text-align: center;
+    margin-bottom: 0.6rem;
+    animation: myColor 4s 2s infinite;
+
+}
+.animation > div:nth-child(2){
+    animation: myColor 5s 3s infinite;
+}
+.animation > div:nth-child(3){
+    animation: myColor 6s 4s infinite;
+}
+.animation > div:nth-child(4){
+    animation: myColor 7s 5s infinite;
+}
+.animation > div:nth-child(5){
+    animation: myColor 8s 6s infinite;
+}
+.animation > div:nth-child(6){
+    animation: myColor 9s 7s infinite;
+}
+     @keyframes myColor{
+        0% {
+            margin-left: 0;
+            border-radius: 0;
+            transform: rotate(0deg);
+            margin-top: 0;
+            margin-bottom: 0;
+        }
+        50% {
+            margin-left: 50%;
+            border-radius: 50%;
+            transform: rotate(360deg);
+            margin-top: 2%;
+            margin-bottom: 2%;
+        }
+        100% {
+            margin-left: 0;
+            border-radius: 0;
+            transform: rotate(0deg);
+            margin-top: 0;
+            margin-bottom: 0;
+        }
+     }
+    </style>
+</head>
+    <header>
+        <header>
+            <h1>Animation in HTML?</h1>
+            <h2>Move things around in the browser</h2>
+        </header>
+        <section class="animation">
+            <div>G</div>
+            <div>O</div>
+            <div>D</div>
+            <div>D</div>
+            <div>A</div>
+            <div>G</div>
+        </section>
+        <section class="animation-battle">
+            <div>T</div>
+            <div>I</div>
+            <div>M</div>
+            <div>4</div>
+            <div>5</div>
+            <div>6</div>
+        </section>
+    </header>
+</body>
+</html>
