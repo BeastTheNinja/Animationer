@@ -1,3 +1,3 @@
-just some fun animations 
+Just some linear gradient, with dialogs and animation
 
-beware of flashes 
+beware of flashes/fast moving gradients
