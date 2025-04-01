@@ -1,15 +1,43 @@
+img{
+    display: block;
+    width: 100%;
+   }
+
 dialog{
-    position: absolute;
-    padding: 0;
+    position: fixed;
+    padding: 0.5rem;
     margin: 0;
     border: 0;
-    background-color: yellow;
     top: 0;
     bottom: 0;
     width: 100%;
+    height: auto;
+    background: transparent;
+    backdrop-filter: blur(12px);
    
 }
 dialog > div{
-    background-color: red;
+    background-color: #ffffff;
+    max-width: 500px;
+    border: 2px solid black;
     padding: 1rem;
+    margin: auto;
+    animation: slideIn 1s ease-in-out;
+}
+@keyframes slideIn{
+    from{
+        margin-top: -100%;
+    }
+    to{
+        margin-top: 1rem;
+    }
+}
+#myDialog div a{
+    background-color: red;
+    color: white;
+    text-decoration: none;
+    font-weight: 800px;
+    padding: 0.5rem;
+    border-radius: 50%;
+    aspect-ratio: 1/1;
 }
