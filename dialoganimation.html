@@ -1,18 +1,34 @@
-<html lang="en">
+<html lang="da">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=, initial-scale=1.0">
     <title>Dialog animation</title>
+    <link rel="stylesheet" href="assets/css/dialog.css">
+    <style>
+       img{
+        display: block;
+        width: 100%;
+       }
+    </style>
 </head>
 <body>
+    <!-- HEADER  -->
     <header><h1>Dialog Animation</h1></header>
     <section>
-        <dialog id="myDialog">
+        <!-- DIALOG  -->
+        <dialog id="myDialog" open>
             <div>
-                hello
+                HELLO FELLOW PEOPLE
+                <a href="#" onclick="window.myDialog.close()">LUK DIALOGEN</a>
             </div>
         </dialog>
     </section>
-    <header class="MyGradient"></header>
+    <header class="MyGradient">
+
+    </header>
+    <a href="#" onclick="window.myDialog.show()">ÅBEN DIALOGEN</a>
+    <img src="assets/img/BeastTheNinja.jpg" alt="">
+    <img src="assets/img/Banner2Beast.jpg" alt="">
+    <!-- <input type="submit" onclick="window.myDialog.show();" value="show dialog"> -->
 </body>
 </html>
